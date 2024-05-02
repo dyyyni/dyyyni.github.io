@@ -97,3 +97,29 @@ h1, p {
     height: auto;
     vertical-align: middle;
 }
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: left; 
+        padding: 10px; 
+    }
+
+    .terminal {
+        white-space: normal; 
+        align-items: left; 
+        padding: 20px; 
+    }
+
+    .static-links {
+        position: static; 
+        transform: translateX(-100%);
+        text-align: left;
+        bottom: 50px; 
+        padding-top: 20px;
+    }
+
+    .icons img {
+        width: 40px;
+    }
+}
