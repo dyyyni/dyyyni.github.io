@@ -1,0 +1,99 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: green;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure positioning context for absolute links */
+}
+
+.terminal {
+    text-align: left;
+    white-space: nowrap;
+    padding: 20px;
+    margin-bottom: 5px; /* Add space at the bottom of terminal */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1, p {
+    margin: 0;
+}
+
+.static-links {
+    text-align: left;
+    position: absolute;
+    bottom: 250px; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-150%); /* Center horizontally */
+}
+
+.static-links p {
+    margin: 5px 0; /* Spacing between each link */
+}
+
+.static-links a {
+    color: green;
+    text-decoration: none; /* No underline by default */
+}
+
+.static-links .link-text {
+    text-decoration: underline; /* Underline only the link text */
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.2em;
+    background-color: green;
+    margin-left: 2px;
+    vertical-align: bottom;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { background-color: black; }
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: #111;
+}
+
+.icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.icons li {
+    margin: 0 10px;
+}
+
+.icons a {
+    display: inline-block;
+    filter: invert(100%); /* Invert colors for visibility */
+}
+
+.icons img {
+    width: 50px; /* Adjust size as necessary */
+    height: auto;
+    vertical-align: middle;
+}
